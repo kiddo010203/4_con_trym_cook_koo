@@ -6,7 +6,7 @@ import Layout from './pages/Layout';
 // import Home from '/pages/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default function Group() {
+export default function App() {
   return (
     <BrowserRouter>
       <Routes>
@@ -19,4 +19,4 @@ export default function Group() {
   );
 }
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Group />);
+root.render(<App />);
