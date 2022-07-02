@@ -43,6 +43,5 @@ const Layout = () => {
     );
 };
 
-//  comment this is a duy haf
 
 export default Layout;
