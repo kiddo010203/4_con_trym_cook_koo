@@ -7,7 +7,7 @@ const Footer = () => {
         <footer className="page-footer font-small blue">
             <div style={{ "background-color": "#000", "color": "white" }}>
                 <div className="row">
-                    <div className="col-md-3 col-sm-6">
+                    <div className="col-md-2 col-sm-6">
                         <p className="title">Sản phẩm</p>
                         <ul className="menu-list">
                             <li className="menu-item"><Link to='/'>Xe du lịch </Link></li>
@@ -16,7 +16,7 @@ const Footer = () => {
                             <li className="menu-item"><Link to='/'>Xe thương mại </Link></li>
                         </ul>
                     </div>
-                    <div className="col-md-3 col-sm-6">
+                    <div className="col-md-2 col-sm-6">
                         <p className="title">MUA XE</p>
                         <ul className="menu-list">
                             <li className="menu-item text-white"><Link to='/'>Chọn xe </Link></li>
@@ -26,7 +26,7 @@ const Footer = () => {
                             <li className="menu-item"><Link to='/'>Tìm đại lý </Link></li>
                         </ul>
                     </div>
-                    <div className="col-md-3 col-sm-6">
+                    <div className="col-md-2 col-sm-6">
                         <p className="title">DỊCH VỤ</p>
                         <ul className="menu-list">
                             <li className="menu-item"><Link to='/'>Phụ tùng & Phụ kiện chính hãng </Link></li>
@@ -35,14 +35,14 @@ const Footer = () => {
                             <li className="menu-item"><Link to='/'>Chăm sóc khách hàng </Link></li>
                         </ul>
                     </div>
-                    <div className="col-md-3 col-sm-6">
+                    <div className="col-md-2 col-sm-6">
                         <p className="title">Giới thiệu</p>
                         <ul className="menu-list">
                             <li className="menu-item"><Link to='/'>Tin công ty </Link></li>
                             <li className="menu-item"><Link to='/'>Giới thiệu Hyundai </Link></li>
                         </ul>
                     </div>
-                    <div className="col-md-3 col-sm-6">
+                    <div className="col-md-2 col-sm-6">
                         <p className="title">Social Media</p>
                         <ul className="menu-list">
                             <li className="menu-item"><Link to='/'>Email: cs@hyundai.thanhcong.vn </Link></li>
