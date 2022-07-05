@@ -1,0 +1,11 @@
+.col-sm-6 img{
+    padding-left: 50%;
+    aspect-ratio: 4/3;
+}
+.card{
+    width: 50%;
+}
+#tintuc{
+    background-color: #0A5470;
+    color: #fff
+}

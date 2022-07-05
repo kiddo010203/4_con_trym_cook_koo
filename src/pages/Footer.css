@@ -1,0 +1,21 @@
+.page-footer{
+    display: block;
+}
+.row{
+    font-family: sans-serif;
+}
+.title{
+    list-style: none;
+    font-size: 20px;
+    font-style: bold;
+}
+.menu-item{
+    list-style: none;
+    text-align: left;
+    font-size: 15px;   
+}
+
+.menu-item Link{
+    color:#fff
+
+}

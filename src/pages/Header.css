@@ -1,0 +1,19 @@
+.search{
+    list-style: none;
+}
+.nav-item{
+    list-style: none;
+}
+#menu {
+    padding-left: 15%;
+}
+#logo{
+    aspect-ratio: 4/3;
+    width: 35%;
+}
+.navbar-brand{
+    padding-left: 5%;
+}
+.menu-item a{
+color: white;
+}
