@@ -20,36 +20,40 @@ export default function Products() {
       });
 
     console.log('app useeffect!!');
-    let url_model = 'https://62be5b370bc9b1256155ad45.mockapi.io/model';
-    fetch(url_model)
+    let url_modeles = 'https://62be5b370bc9b1256155ad45.mockapi.io/model';
+
+    fetch(url_modeles)
       .then((response) => response.json())
       .then((data) => {
         setModeles(data);
       });
   }, []);
-
   var modeles_jsx = [];
+
   if (modeles != null) {
     modeles_jsx = (
-      <nav className=" category navbar navbar-expand-sm bg-dark navbar-dark">
-        <div className="container col-md-3 col-sm-6">
-          <ul className=" navbar-nav">
-            {
-              (modeles_jsx = modeles.map((item) => (
-                <li>
-                  <Link to={'model/' + item.model}>{item.model}</Link>
-                </li>
-              )))
-            }
-          </ul>
-        </div>
+      <nav style={{padding:'3%'}} className="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul className="nav navbar-nav">
+          {
+            (modeles_jsx = modeles.map((item) => (
+              <li>
+                <Link to={'category/' + item.model_name}>
+                  {item.model_name}
+                </Link>
+              </li>
+            )))
+          }
+        </ul>
       </nav>
     );
   }
 
   return (
-    <div className="containerProducts">
-      <div className="banner">
+    <div className="container">
+      <div className="container">
+        <div className="banner"></div>
+      </div>
+      <div className="container">
         <ul>
           <li className="list-group-item">
             <Link to="/">Trang chủ</Link>
@@ -61,6 +65,8 @@ export default function Products() {
             <Link to=""> Sản Phẩm</Link>
           </li>
         </ul>
+      </div>
+      <div className="container">
         <div className="list">
           <div className="banner-text">
             <h1 className="text-center">Sản Phẩm</h1>
@@ -68,12 +74,18 @@ export default function Products() {
               Tất cả sản phẩm của Huyndai Hoàng Cầu Việt Nam
             </h4>
           </div>
-          <img className="banner-img" src="https://www.dailyhyundai.org/files/banner-F3Gvps4gzK.jpg" />
+          <img
+            className="banner-img"
+            src="https://www.dailyhyundai.org/files/banner-F3Gvps4gzK.jpg"
+          />
         </div>
-        {modeles_jsx}
-
-        <ProductList data={shop}></ProductList>
       </div>
+      <div className='container'>
+        {modeles_jsx}
+      </div>
+
+      <ProductList data={shop}></ProductList>
     </div>
+
   );
 }

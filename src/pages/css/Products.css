@@ -47,22 +47,22 @@ ul {
     background-color: rgba(255, 255, 255, 0.3);
   }
   
-  .frame {
-    width: 30%;
+  .card {
+    width: 100%;
     float: left;
     text-align: center;
     margin: 10px;
+    border-radius: 30px;
   }
   .picture {
     aspect-ratio: 4/3;
-    border-radius: 8px 8px 0 0;
   }
   
-  .frame .card:hover::after {
+  .card:hover::after {
     visibility: visible;
     opacity: 1;
   }
-  .frame .card::after {
+  .card::after {
     content: '';
     position: absolute;
     top: 0;
@@ -81,15 +81,15 @@ ul {
     color: black;
     font-size: 20px;
   }
-  .card {
-    border-radius: 8px;
-  }
+  
   .card:hover a {
     text-decoration: underline;
     color: red;
   }
   .card:hover .name {
     color: red;
+    transform: scale(1.2);
+    transition: transform 0.5s ease-out;
   }
   .category {
     padding: 0px 0px 50px 0;
@@ -111,10 +111,19 @@ ul {
     background-color: white;
   }
   .list {
-    margin-top: 393px;
+    margin-top: 440px;
   }
   
   .containerProducts {
     margin-top: 100px;
     margin-bottom: 100px;
   }
+
+.navbar li{
+  margin: 10px 70px;
+  font-size: 20px;
+  
+}
+.navbar li a{
+  color:white;
+}

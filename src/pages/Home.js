@@ -44,18 +44,18 @@ function Home() {
       <div class="container">
         <div class="box1 row">
           <div class="img-hover-zoom col-md-6 col-sm-4" border="1px" solid="#ddd">
-            <h2>Dịch vụ bảo trì</h2>
-            <p>Tại sao bạn nên kiểm tra xe thường xuyên?</p>
-            <button type="button" class="btn btn-primary">Xem thêm</button>
+            <h2>Dịch vụ thuê xe</h2>
+            <p>Tại sao bạn nên thuê xe ôtô?</p>
+            <button type="button" class="btn btn-primary">Đăng ký thuê xe</button>
           </div>
           <div class="img-hover-zoom col-xl-6 col-lg-6 col-md-6" border="1px" solid="#ddd">
-            <img src='https://hyundai-api.thanhcong.vn/storage/uploads/maintenance/service-hyundai-min.png' />
+            <img src='https://hyundai-phuyen.vn/upload/tour/296503141091.png' />
           </div>
         </div>
       </div>
 
 
-      <div class='row row-0'>
+      {/* <div class='row row-0'>
         <div class='img-hover-zoom col-sm-6'>
           <img src='	https://hyundai-api.thanhcong.vn/storage/uploads/home-block/service-hyundai-min.png' />
         </div>
@@ -68,7 +68,7 @@ function Home() {
         <div class='img-hover-zoom col-sm-6'>
           <img src='	https://hyundai-api.thanhcong.vn/storage/uploads/home-block/service-hyundai-min.png' />
         </div>
-      </div>
+      </div> */}
 
     </div>
   );
