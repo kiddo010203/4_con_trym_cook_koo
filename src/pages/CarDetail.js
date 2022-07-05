@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import { useParams } from 'react-router-dom';
-
+import "../css/MainAdmin.css";
 
 const CarsDetail = () => {
   const params = useParams();
@@ -60,8 +60,6 @@ const CarsDetail = () => {
                           <td className="text-primary">{cars.model}</td>
                         </tr>
 
-
-
                         <tr>
                           <td>
                             <strong>Price</strong>
@@ -81,7 +79,7 @@ const CarsDetail = () => {
                             <strong>Picture</strong>
                           </td>
                           <td className="text-primary">
-                            <img src={cars.picture} className="img-circle" />
+                            <img src={cars.picture} className={"img_edit"} />
                           </td>
                         </tr>
                         <tr>
@@ -90,8 +88,6 @@ const CarsDetail = () => {
                           </td>
                           <td className="text-primary">{cars.bio}</td>
                         </tr>
-
-
                         </tbody>
                       </table>
                     </div>
