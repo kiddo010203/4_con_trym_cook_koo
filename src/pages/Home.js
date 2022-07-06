@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/Home.css';
+import '../css/Home.css';
 import '../App.css';
 import { Link, NavLink } from 'react-router-dom';
 
@@ -46,30 +46,13 @@ function Home() {
           <div class="img-hover-zoom col-md-6 col-sm-4" border="1px" solid="#ddd">
             <h2>Dịch vụ thuê xe</h2>
             <p>Tại sao bạn nên thuê xe ôtô?</p>
-            <Link to='/' type="button" class="btn btn-primary">Đăng ký thuê xe</Link>
+            <Link to='/admin/caredit/new' type="button" class="btn btn-primary">Đăng ký thuê xe</Link>
           </div>
           <div class="img-hover-zoom col-xl-6 col-lg-6 col-md-6" border="1px" solid="#ddd">
             <img src='https://hyundai-phuyen.vn/upload/tour/296503141091.png' />
           </div>
         </div>
       </div>
-
-
-      {/* <div class='row row-0'>
-        <div class='img-hover-zoom col-sm-6'>
-          <img src='	https://hyundai-api.thanhcong.vn/storage/uploads/home-block/service-hyundai-min.png' />
-        </div>
-        <div class='img-hover-zoom col-sm-6'>
-          <img src='	https://hyundai-api.thanhcong.vn/storage/uploads/home-block/service-hyundai-min.png' />
-        </div>
-        <div class='img-hover-zoom col-sm-6'>
-          <img src='	https://hyundai-api.thanhcong.vn/storage/uploads/home-block/service-hyundai-min.png' />
-        </div>
-        <div class='img-hover-zoom col-sm-6'>
-          <img src='	https://hyundai-api.thanhcong.vn/storage/uploads/home-block/service-hyundai-min.png' />
-        </div>
-      </div> */}
-
     </div>
   );
 };

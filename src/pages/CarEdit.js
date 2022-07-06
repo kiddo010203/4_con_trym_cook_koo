@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from "react";
-import {Link, useNavigate, useParams} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import "../css/MainAdmin.css"
 
 export default function CarsEdit() {
@@ -9,13 +9,13 @@ export default function CarsEdit() {
   useEffect(() => {
     if (params.id !== "new") {
       let url =
-          "https://62be5b370bc9b1256155ad45.mockapi.io/huyndai/" + params.id;
+        "https://62be5b370bc9b1256155ad45.mockapi.io/huyndai/" + params.id;
 
       fetch(url)
-          .then((response) => response.json())
-          .then((data) => {
-            setCars(data);
-          });
+        .then((response) => response.json())
+        .then((data) => {
+          setCars(data);
+        });
     } else {
       let initData = {};
       setCars(initData);
@@ -33,28 +33,12 @@ export default function CarsEdit() {
     const name = target.name;
 
     console.log(name);
-    let data = {...cars};
+    let data = { ...cars };
     data[name] = value;
-
-    // if (name === "gender") {
-    //   data[name] = str2bool(value);
-    //   console.log("gender");
-    //   console.log(data[name]);
-    // }
 
     console.log(data);
     setCars(data);
   };
-
-  // var str2bool = (value) => {
-  //   if (value && typeof value === "string") {
-  //     if (value.toLowerCase() === "true") return true;
-  //     if (value.toLowerCase() === "false") return false;
-  //   }
-  //   return value;
-  // };
-
-
 
   const saveUser = () => {
     let method = "POST";
@@ -65,153 +49,146 @@ export default function CarsEdit() {
     }
     const requestOptions = {
       method: method,
-      headers: {"Content-Type": "application/json"},
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(cars)
     };
 
     fetch(
-        "https://62be5b370bc9b1256155ad45.mockapi.io/huyndai/" + id,
-        requestOptions
+      "https://62be5b370bc9b1256155ad45.mockapi.io/huyndai/" + id,
+      requestOptions
     )
-        .then((response) => response.json())
-        .then((data) => {
-          //var date = new Date(data.dob);
-          //data.dob = date.getTime();
+      .then((response) => response.json())
+      .then((data) => {
 
-          console.log(data);
-          navigate(-1);
-        });
+        console.log(data);
+        navigate(-1);
+      });
   };
 
 
   return (
-      <>
-        {cars != null ? (
-            <div className="container-fluid">
+    <>
+      {cars != null ? (
+        <div className="container-fluid">
+          <div className="panel-body inf-content">
+            <div className="row">
+              <div className="col-lg-12">
+                <strong>{cars.id ? 'EDIT CAR' : 'NEW CAR'}</strong>
+                <br />
+                <div className="table-responsive">
+                  <table className="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <strong>Name</strong>
+                        </td>
+                        <td>
+                          <input
+                            type="text"
+                            className="form-control"
+                            value={cars.name}
+                            name="name"
+                            onChange={(e) => handleChange(e)}
+                          ></input>
+                        </td>
+                      </tr>
 
-              <div className="panel-body inf-content">
-                <div className="row">
-                  <div className="col-lg-12">
-                    <strong>Add new Your Information</strong>
-                    <br/>
-                    <div className="table-responsive">
-                      <table className="table table-user-information">
-                        <tbody>
+                      <tr>
+                        <td>
+                          <strong>Model</strong>
+                        </td>
+                        <td>
+                          <input
+                            type="text"
+                            className="form-control"
+                            value={cars.model}
+                            name="model"
+                            onChange={(e) => handleChange(e)}
+                          ></input>
+                        </td>
+                      </tr>
 
-                        <tr>
-                          <td>
-                            <strong>Name</strong>
-                          </td>
-                          {/* <td className="text-primary">{cars.firstName}</td> */}
-                          <td>
-                            <input
-                                type="text"
-                                className="form-control"
-                                value={cars.name}
-                                name="name"
-                                onChange={(e) => handleChange(e)}
-                            ></input>
-                          </td>
-                        </tr>
+                      <tr>
+                        <td>
+                          <strong>Price</strong>
+                        </td>
+                        <td>
+                          <input
+                            type="text"
+                            className="form-control"
+                            value={cars.price}
+                            name="price"
+                            onChange={(e) => handleChange(e)}
 
-                        <tr>
-                          <td>
-                            <strong>Model</strong>
-                          </td>
-                          {/* <td className="text-primary">{cars.firstName}</td> */}
-                          <td>
-                            <input
-                                type="text"
-                                className="form-control"
-                                value={cars.model}
-                                name="model"
-                                onChange={(e) => handleChange(e)}
-                            ></input>
-                          </td>
-                        </tr>
+                          ></input>
+                        </td>
+                      </tr>
 
-                        <tr>
-                          <td>
-                            <strong>Price</strong>
-                          </td>
-                          {/* <td className="text-primary">{cars.firstName}</td> */}
-                          <td>
-                            <input
-                                type="text"
-                                className="form-control"
-                                value={cars.price}
-                                name="price"
-                                onChange={(e) => handleChange(e)}
+                      <tr>
+                        <td>
+                          <strong>Release Date</strong>
+                        </td>
+                        <td>
+                          <input
+                            type="date"
+                            className="form-control"
+                            value={cars.date}
+                            name="date"
+                            onChange={(e) => handleChange(e)}
+                          ></input>
+                        </td>
+                      </tr>
 
-                            ></input>
-                          </td>
-                        </tr>
+                      <tr>
+                        <td>
+                          <strong>Picture</strong>
+                        </td>
+                        <td className="text-primary">
+                          <input type="text" onChange={(e) => handleChange(e)} value={cars.picture} name="picture" className="filetype" />
+                          <img className="img_edit" src={cars.picture} alt="preview image" />
 
-                        <tr>
-                          <td>
-                            <strong>Release Date</strong>
-                          </td>
-                          <td>
-                            <input
-                                type="date"
-                                className="form-control"
-                                value={cars.date}
-                                name="date"
-                                onChange={(e) => handleChange(e)}
-                            ></input>
-                          </td>
-                        </tr>
-
-                        <tr>
-                          <td>
-                            <strong>Picture</strong>
-                          </td>
-                          <td className="text-primary">
-                            <input type="text" onChange={(e) => handleChange(e)} value={cars.picture} name="picture" className="filetype" />
-                            <img className="img_edit" src={cars.picture} alt="preview image" />
-
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <strong>Bio</strong>
-                          </td>
-                          <td>
-                        <textarea
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>Bio</strong>
+                        </td>
+                        <td>
+                          <textarea
                             type="text"
                             name="bio"
                             className="form-control"
                             value={cars.bio}
                             onChange={(e) => handleChange(e)}
-                        ></textarea>
-                          </td>
-                        </tr>
+                          ></textarea>
+                        </td>
+                      </tr>
 
-                        </tbody>
-                      </table>
-                      <div>
-                        <button
-                            type="button"
-                            className="btn btn-primary"
-                            onClick={() => saveUser()}
-                        >
-                          Save
-                        </button>
-                        <span> </span>
-                        <Link to="/">
-                          <button type="button" className="btn btn-secondary">
-                            Cancel
-                          </button>
-                        </Link>
-                      </div>
-                    </div>
+                    </tbody>
+                  </table>
+                  <div>
+                    <button
+                      type="button"
+                      className="btn btn-primary"
+                      onClick={() => saveUser()}
+                    >
+                      Save
+                    </button>
+                    <span> </span>
+                    <Link to="/">
+                      <button type="button" className="btn btn-secondary">
+                        Cancel
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
-        ) : (
-            "loading"
-        )}
-      </>
+          </div>
+        </div>
+      ) : (
+        "loading"
+      )}
+    </>
   );
 }

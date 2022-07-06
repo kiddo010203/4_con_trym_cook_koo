@@ -43,7 +43,7 @@ export default function ListCars(props) {
           <td className="col-sm-2">
             <NavLink to={'/admin/' + item.id}>Details</NavLink>
           <br/>
-            <NavLink to={'/edit/' + item.id}>
+            <NavLink to={'/admin/caredit/' + item.id}>
               <button type="button" className="btn btn-primary">
                 Edit
               </button>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import ListCars from "../components/ListCars";
+import ListCars from "../Components/ListCars";
 
 export default function Admin() {
   const [cars, setCars] = useState(null);
@@ -21,25 +21,6 @@ export default function Admin() {
         });
   }, [searchInput]);
 
-  // var list_cars = [];
-  // if (cars != null) {
-  //   list_cars = cars.map((item) => (
-  //       <tr>
-  //         <td>{item.id}</td>
-  //         <td>{item.name}</td>
-  //         <td>{item.model}</td>
-  //         <td>${item.price}</td>
-  //         <td>
-  //           <img src={item.picture} style={{ width: "100px", height: "100px" }} />
-  //         </td>
-  //         <td>
-  //           <NavLink to={"/admin/" + item.id}>Detail</NavLink>
-  //
-  //         </td>
-  //       </tr>
-  //   ));
-  // }
-
   return (
       <div className="container-fluid">
         <h2 className="text-center">PRODUCT MANAGEMENT TABLE</h2>
@@ -56,14 +37,13 @@ export default function Admin() {
                 <button
                     className="btn btn-secondary"
                     type="button"
-                    // onClick={searchStudent}
                 >
                   <i className="fa fa-search"></i>
                 </button>
               </div>
             </div>
             <div className="text-center">
-              <NavLink to="/edit/new">
+              <NavLink to="/admin/caredit/new">
                 <button type="button" className="btn btn-success">
                   Add new
                 </button>

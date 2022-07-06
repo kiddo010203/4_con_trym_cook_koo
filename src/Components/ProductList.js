@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
-import '../pages/css/Products.css';
+import '../css/Products.css';
 
 function ProductList(props) {
   const [hyundai, setHyundai] = useState(null);

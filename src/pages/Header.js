@@ -1,7 +1,7 @@
 import { Outlet, Link } from 'react-router-dom';
 import React from 'react';
 import { useState } from 'react';
-import './css/Header.css';
+import '../css/Header.css';
 
 export default function App() {
     const [hyundai, setHyundai] = useState(null);
@@ -33,42 +33,24 @@ export default function App() {
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-                                Thuê xe
+                                Dịch vụ
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <Link to='/' class="dropdown-item">HTV Shop</Link>
-                                <Link to='/' class="dropdown-item">Thông tin khuyến mãi</Link>
-                                <Link to='/' class="dropdown-item">Đăng ký thuê xe</Link>
+                                <Link to='service' class="dropdown-item">Dịch vụ</Link>
+                                <Link to='baohanh' class="dropdown-item">Bảo hành</Link>
+                                <Link to='baoduongsuachua' class="dropdown-item">Bảo dưỡng định kỳ & sửa chữa</Link>
+                                <Link to='phutungphukien' class="dropdown-item">Phụ tùng & phụ kiện</Link>
+                                <Link to='chuongtrinh' class="dropdown-item">Chương trình dịch vụ</Link>
+                                {/* <Link to='trieuhoi' class="dropdown-item">Triệu hồi</Link> */}
                             </div>
+                        </li>
+                        <li class="nav-item">
+                            <Link to='contact' class="nav-link">Thông tin đại lý</Link>
                         </li>
                         <li class="nav-item">
                             <Link to='contact' class="nav-link">Liên hệ</Link>
                         </li>
-                    </ul>
-                    <li class='search'>
-                        <form className="form-inline my-2 my-lg-0">
-                            <div className="input-group">
-                                <input
-                                    type="text"
-                                    className="form-control"
-                                    size="50"
-                                    placeholder="Tìm xe"
-                                    value={searchTerm}
-                                    onChange={(e) => setSearchTerm(e.target.value)} />
-                                <div className="input-group-btn">
-                                    <button
-                                        type="button"
-                                        className="btn btn-danger"
-                                        onClick={doSearch}
-                                    >
-                                        Search
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                        <div className="container-fluid">
-                        </div>
-                    </li>
+                    </ul>                   
                 </div>
             </nav>
         </div>
