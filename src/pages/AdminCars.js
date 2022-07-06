@@ -1,7 +1,8 @@
-import React, {useEffect, useState} from "react";
-import {NavLink} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
+import ListCars from "../components/ListCars";
 
-export default function AdminCars() {
+export default function Admin() {
   const [cars, setCars] = useState(null);
   const [searchInput, setSearchInput] = useState("");
 
@@ -9,7 +10,7 @@ export default function AdminCars() {
     let url = "https://62be5b370bc9b1256155ad45.mockapi.io/huyndai";
 
     if (searchInput.length > 0) {
-      url = url + "?model=" + searchInput;
+      url = url + "?name=" + searchInput;
     }
 
     fetch(url)
@@ -20,26 +21,27 @@ export default function AdminCars() {
         });
   }, [searchInput]);
 
-  var list_cars = [];
-  if (cars != null) {
-    list_cars = cars.map((item) => (
-        <tr>
-          <td>{item.id}</td>
-          <td>{item.name}</td>
-          <td>{item.model}</td>
-          <td>${item.price}</td>
-          <td>
-            <img src={item.picture} style={{width: "100px", height: "100px"}}/>
-          </td>
-          <td>
-            <NavLink to={"/admin/" + item.id}>Detail</NavLink>
-          </td>
-        </tr>
-    ));
-  }
+  // var list_cars = [];
+  // if (cars != null) {
+  //   list_cars = cars.map((item) => (
+  //       <tr>
+  //         <td>{item.id}</td>
+  //         <td>{item.name}</td>
+  //         <td>{item.model}</td>
+  //         <td>${item.price}</td>
+  //         <td>
+  //           <img src={item.picture} style={{ width: "100px", height: "100px" }} />
+  //         </td>
+  //         <td>
+  //           <NavLink to={"/admin/" + item.id}>Detail</NavLink>
+  //
+  //         </td>
+  //       </tr>
+  //   ));
+  // }
 
   return (
-      <div className="container">
+      <div className="container-fluid">
         <h2 className="text-center">PRODUCT MANAGEMENT TABLE</h2>
         <div className="row">
           <div className="col-lg-12">
@@ -80,7 +82,8 @@ export default function AdminCars() {
               <th className="col-sm-2">Info</th>
             </tr>
             </thead>
-            <tbody>{list_cars}</tbody>
+            <ListCars data={cars} />
+
           </table>
         </div>
       </div>

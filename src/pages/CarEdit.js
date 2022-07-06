@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {Link, useNavigate, useParams} from "react-router-dom";
-import "./css/MainAdmin.css"
+import "../css/MainAdmin.css"
 
 export default function CarsEdit() {
   const params = useParams();
@@ -23,8 +23,8 @@ export default function CarsEdit() {
 
 
   }, []);
-
   const navigate = useNavigate();
+
 
   const handleChange = (event) => {
     console.log(event);
@@ -142,6 +142,7 @@ export default function CarsEdit() {
                                 value={cars.price}
                                 name="price"
                                 onChange={(e) => handleChange(e)}
+
                             ></input>
                           </td>
                         </tr>

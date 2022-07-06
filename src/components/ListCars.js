@@ -41,7 +41,7 @@ export default function ListCars(props) {
           <td className="col-sm-1"><img className={"img_edit"} src={item.picture} /></td>
 
           <td className="col-sm-2">
-            <NavLink to={'/cars/' + item.id}>Details</NavLink>
+            <NavLink to={'/admin/' + item.id}>Details</NavLink>
           <br/>
             <NavLink to={'/edit/' + item.id}>
               <button type="button" className="btn btn-primary">

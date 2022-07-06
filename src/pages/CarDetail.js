@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import { useParams } from 'react-router-dom';
-import "./css/MainAdmin.css";
+import "../css/MainAdmin.css";
 
 const CarsDetail = () => {
   const params = useParams();
@@ -21,6 +21,8 @@ const CarsDetail = () => {
           setCars(data); //setStudents(data)
         });
   }, []);
+
+
 
   const formatDate = (date) => {
     let day = date.getDate();
