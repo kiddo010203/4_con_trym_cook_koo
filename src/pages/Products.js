@@ -7,7 +7,7 @@ import '../css/Products.css';
 
 export default function Products() {
   const [hyundai, setHyundai] = useState(null);
-  const [model, setModel] = useState(null);
+  const [modeles, setModeles] = useState(null);
   const [searchInput, setSearchInput] = useState("");
 
   useEffect(() => {
@@ -20,11 +20,11 @@ export default function Products() {
       });
 
     console.log('app useeffect!!');
-    let url_model = 'https://62be5b370bc9b1256155ad45.mockapi.io/model';
-    fetch(url_model)
+    let url_modeles = 'https://62be5b370bc9b1256155ad45.mockapi.io/model';
+    fetch(url_modeles)
       .then((response) => response.json())
       .then((data) => {
-        setModel(data);
+        setModeles(data);
       });
   }, []);
 
@@ -43,13 +43,13 @@ export default function Products() {
         });
   }, [searchInput]);
 
-  var model_jsx = [];
-  if (model != null) {
-    model_jsx = (
+  var modeles_jsx = [];
+  if (modeles != null) {
+    modeles_jsx = (
       <nav style={{ padding: '3%', width: '1110px' }} className="navbar navbar-expand-sm bg-dark navbar-dark">
         <ul className="menu nav navbar-nav">
           {
-            (model_jsx = model.map((item) => (
+            (modeles_jsx = modeles.map((item) => (
               <li key={item.id}>
                 <Link to={'model/' + item.model_name}>
                   {item.model_name}
@@ -113,7 +113,7 @@ export default function Products() {
         </li>
       </div>
       <div className='container'>
-        {model_jsx}
+        {modeles_jsx}
       </div>
 
       <ProductList data={hyundai}></ProductList>

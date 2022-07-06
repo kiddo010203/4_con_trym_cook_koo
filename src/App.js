@@ -12,8 +12,8 @@ import Baohanh from './pages/Baohanh';
 import Baoduongsuachua from './pages/Baoduongsuachua';
 import Phutungphukien from './pages/Phutungphukien';
 import Chuongtrinh from './pages/Chuongtrinh';
-// import Trieuhoi from './pages/Trieuhoi';
-// import Baoduongsuachua from './pages/Baoduongsuachua';
+import Trieuhoi from './pages/Trieuhoi';
+import Detail from './pages/Detail';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 export default function App() {
@@ -32,7 +32,8 @@ export default function App() {
           <Route path="baoduongsuachua" element={<Baoduongsuachua />} />
           <Route path="phutungphukien" element={<Phutungphukien />} />
           <Route path="chuongtrinh" element={<Chuongtrinh />} />
-          {/* <Route path="trieuhoi" element={<Trieuhoi />} /> */}
+          <Route path="trieuhoi" element={<Trieuhoi />} />
+          <Route path="detail/:id" element={<Detail/>} />
         </Route>
       </Routes>
     </BrowserRouter>

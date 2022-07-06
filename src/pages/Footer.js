@@ -5,7 +5,7 @@ import '../css/Footer.css';
 const Footer = () => {
     return (
         <footer className="page-footer">
-            <div style={{ "background-color": "#fff", "color": "black" }}>
+            <div style={{ "background-color": "#000", "color": "white" }}>
                 <div className="container">
                     <div className='row'>
                         <div className="col-md-2 col-sm-6">
@@ -48,7 +48,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div style={{ "background-color": "#fff", "color": "grey" }}>
+            <div style={{ "background-color": "#000", "color": "grey" }}>
                 <div className="container">
                     <div className='row'>
                         <div className='menu-item'>

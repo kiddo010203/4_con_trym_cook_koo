@@ -41,7 +41,7 @@ export default function App() {
                                 <Link to='baoduongsuachua' class="dropdown-item">Bảo dưỡng định kỳ & sửa chữa</Link>
                                 <Link to='phutungphukien' class="dropdown-item">Phụ tùng & phụ kiện</Link>
                                 <Link to='chuongtrinh' class="dropdown-item">Chương trình dịch vụ</Link>
-                                {/* <Link to='trieuhoi' class="dropdown-item">Triệu hồi</Link> */}
+                                <Link to='trieuhoi' class="dropdown-item">Triệu hồi</Link>
                             </div>
                         </li>
                         <li class="nav-item">

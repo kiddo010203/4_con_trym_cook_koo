@@ -54,7 +54,7 @@ export default function ListCars(props) {
                 className="btn btn-danger"
                 onClick={() => deleteUser(item.id)}
             >
-              <i className="fa fa-trash text-danger" aria-hidden="true"></i>
+              <i className="fa fa-trash text-white" aria-hidden="true"></i>
             </button>
           </td>
         </tr>

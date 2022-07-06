@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import ListCars from "../Components/ListCars";
+import '../css/Admin.css';
 
 export default function Admin() {
   const [cars, setCars] = useState(null);
@@ -23,9 +24,9 @@ export default function Admin() {
 
   return (
       <div className="container-fluid">
-        <h2 className="text-center">PRODUCT MANAGEMENT TABLE</h2>
+        <h2 className="text-center">CAR MANAGEMENT TABLE</h2>
         <div className="row">
-          <div className="col-lg-12">
+          <div className="adminSearch col-md-6">
             <div className="input-group">
               <input
                   type="text"

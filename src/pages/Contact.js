@@ -6,7 +6,7 @@ function Contact() {
     return (
         <div>
             <div class="container">
-                <div class="row partner">
+                <div class="box1 row partner">
                     <div class="container-fluid text-center">
                         <h1 class="section-title">LIÊN HỆ</h1>
                     </div>
