@@ -6,19 +6,19 @@ import { useParams } from 'react-router-dom';
 import '../pages/css/Products.css';
 
 function ProductList(props) {
-  const [shop, setShop] = useState(null);
-  const [categories, setCategories] = useState(null);
+  const [hyundai, setHyundai] = useState(null);
+  const [modeles, setModeles] = useState(null);
 
   useEffect(() => {
     console.log('product list useEffect!!');
-    setShop(props.data);
+    setHyundai(props.data);
     console.log('categories useEffect');
-    setCategories(props.data);
+    setModeles(props.data);
   }, [props.data]);
 
-  var products_jsx = [];
-  if (shop != null) {
-    products_jsx = shop.map((item) => (
+  var hyundai_jsx = [];
+  if (hyundai != null) {
+    hyundai_jsx = hyundai.map((item) => (
       <div className="col-lg-4">
         <Link to={'/detail/' + item.id}>
           <div className='card'>
@@ -33,7 +33,7 @@ function ProductList(props) {
   }
   return (
     <div className="container-fuild">
-      <div className="row card-deck">{products_jsx}</div>
+      <div className="row card-deck">{hyundai_jsx}</div>
       <div className='containerProducts'></div>
     </div>
 

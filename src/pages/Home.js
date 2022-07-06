@@ -46,7 +46,7 @@ function Home() {
           <div class="img-hover-zoom col-md-6 col-sm-4" border="1px" solid="#ddd">
             <h2>Dịch vụ thuê xe</h2>
             <p>Tại sao bạn nên thuê xe ôtô?</p>
-            <button type="button" class="btn btn-primary">Đăng ký thuê xe</button>
+            <Link to='/' type="button" class="btn btn-primary">Đăng ký thuê xe</Link>
           </div>
           <div class="img-hover-zoom col-xl-6 col-lg-6 col-md-6" border="1px" solid="#ddd">
             <img src='https://hyundai-phuyen.vn/upload/tour/296503141091.png' />

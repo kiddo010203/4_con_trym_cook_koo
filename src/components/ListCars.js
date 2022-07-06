@@ -1,54 +1,71 @@
-import React, { useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
-
+import React, {useEffect, useState} from "react";
+import {Link, NavLink} from 'react-router-dom';
+import "../css/MainAdmin.css";
 
 export default function ListCars(props) {
   // set data car from props
   const [cars, setCars] = useState(null);
 
-
   useEffect(() => {
     console.log('ListCars', cars);
 
-    setCars(props.cars);  // set car data from props
-  }, [props.cars]);
+    setCars(props.data);  // set car data from props
+  }, [props.data]);
+
+
+
+  const deleteUser = (id) => {
+    fetch('https://62be5b370bc9b1256155ad45.mockapi.io/huyndai/' + id, {
+      method: 'DELETE',
+    }).then(() => {
+      console.log('delete successful!!');
+      let result = [...cars];
+      result = result.filter((item) => {
+        return item.id != id;
+      });
+      setCars(result);
+    });
+  };
+
 
 
   console.log("list cars");
-
   var list_cars = [];
   if (cars != null) {
     list_cars = cars.map((item) => (
-        <tr key={item.id}>
-          <td>{item.name}</td>
-          <td>${item.price}</td>
-          <td>{item.origin}</td>
-          <td>{item.model}</td>
-          <td>{item.bio}</td>
+        <tr key={item.id} id={"list_car"}>
+          <td className="col-sm-1">{item.id}</td>
+          <td className="col-sm-2">{item.name}</td>
+          <td className="col-sm-3">{item.model}</td>
+          <td className="col-sm-2">${item.price}</td>
+          <td className="col-sm-1"><img className={"img_edit"} src={item.picture} /></td>
 
-          {/* <td>
-                    <Link to={'/cars/' + item.id}>Details</Link>
-                </td> */}
+          <td className="col-sm-2">
+            <NavLink to={'/cars/' + item.id}>Details</NavLink>
+          <br/>
+            <NavLink to={'/edit/' + item.id}>
+              <button type="button" className="btn btn-primary">
+                Edit
+              </button>
+            </NavLink>
 
+            <button
+                type="button"
+                className="btn btn-danger"
+                onClick={() => deleteUser(item.id)}
+            >
+              <i className="fa fa-trash text-danger" aria-hidden="true"></i>
+            </button>
+          </td>
         </tr>
-
     ));
   }
 
 
   return (
-      <div className='container'>
-        <div className="row">
-          <div className="col-lg-12">
 
-          </div>
-
-        </div>
-        <table className="table">
-          <thead className='thead-dark'><tr><th className="col-sm-1">ID</th><th className="col-sm-2">Name</th><th className="col-sm-3">Price</th><th className="col-sm-2">Origin</th><th className="col-sm-1">Model</th><th className="col-sm-2">Bio</th></tr></thead>
-
+        <>
           <tbody>{list_cars}</tbody>
-        </table>
-      </div>
+        </>
   );
 }

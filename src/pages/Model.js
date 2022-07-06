@@ -5,33 +5,30 @@ import { useEffect } from 'react';
 import ProductList from '../Components/ProductList';
 
 const Model = () => {
-  const [shop, setShop] = useState(null);
-  const [model_namme, setModel] = useState(null);
+  const [hyundai, setHyundai] = useState(null);
+  const [model, setModel] = useState(null);
   const params = useParams();
   useEffect(() => {
     console.log('user use effect!!');
 
     let url =
-      'https://62b41523530b26da4cb5ec39.mockapi.io/huyndai?model=' +
-      params.model;
-
+      'https://62be5b370bc9b1256155ad45.mockapi.io/huyndai?model=' + params.name;
     console.log(url);
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        setShop(data);
-        setModel(params.model);
+        setHyundai(data);
+        setModel(params.name);
       });
   }, []);
 
   return (
     <div>
       <div className="App-jumbotron jumbotron text-center ">
-        <h1>{model_namme} Products</h1>
-        <p>Here We Go</p>
+        <h1>{model}</h1>
       </div>
       <div className="container">
-        <ProductList data={shop}></ProductList>
+        <ProductList data={hyundai}></ProductList>
       </div>
     </div>
   );

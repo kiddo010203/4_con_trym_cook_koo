@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {Link, useNavigate, useParams} from "react-router-dom";
-import "../css/MainAdmin.css"
+import "./css/MainAdmin.css"
 
 export default function CarsEdit() {
   const params = useParams();

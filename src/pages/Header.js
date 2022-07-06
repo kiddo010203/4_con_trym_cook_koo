@@ -1,8 +1,24 @@
 import { Outlet, Link } from 'react-router-dom';
 import React from 'react';
+import { useState } from 'react';
 import './css/Header.css';
 
-const Header = () => {
+export default function App() {
+    const [hyundai, setHyundai] = useState(null);
+    const [searchTerm, setSearchTerm] = useState('');
+
+    const doSearch = () => {
+        let url =
+            'https://62be5b370bc9b1256155ad45.mockapi.io/huyndai?name=' + searchTerm;
+        fetch(url)
+            .then((response) => response.json())
+            .then((data) => {
+                setSearchTerm('');
+                setHyundai(data);
+            });
+    };
+
+
     return (
         <div>
             <nav class="navbar navbar-expand-lg navbar-light bg-white">
@@ -16,9 +32,9 @@ const Header = () => {
                             <Link to='products' class="nav-link">Các loại xe</Link>
                         </li>
                         <li class="nav-item dropdown">
-                            <Link to='/' class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
                                 Thuê xe
-                            </Link>
+                            </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <Link to='/' class="dropdown-item">HTV Shop</Link>
                                 <Link to='/' class="dropdown-item">Thông tin khuyến mãi</Link>
@@ -27,7 +43,7 @@ const Header = () => {
                         </li>
                         <li class="nav-item">
                             <Link to='contact' class="nav-link">Liên hệ</Link>
-                        </li>                        
+                        </li>
                     </ul>
                     <li class='search'>
                         <form className="form-inline my-2 my-lg-0">
@@ -36,9 +52,17 @@ const Header = () => {
                                     type="text"
                                     className="form-control"
                                     size="50"
-                                    placeholder="Search" />
+                                    placeholder="Tìm xe"
+                                    value={searchTerm}
+                                    onChange={(e) => setSearchTerm(e.target.value)} />
                                 <div className="input-group-btn">
-                                    <button type="button" className="btn btn-danger" onClick>Search</button>
+                                    <button
+                                        type="button"
+                                        className="btn btn-danger"
+                                        onClick={doSearch}
+                                    >
+                                        Search
+                                    </button>
                                 </div>
                             </div>
                         </form>
@@ -52,4 +76,3 @@ const Header = () => {
 };
 
 
-export default Header;

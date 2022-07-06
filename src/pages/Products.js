@@ -6,38 +6,36 @@ import { Link, NavLink } from 'react-router-dom';
 import './css/Products.css';
 
 export default function Products() {
-  const [shop, setShop] = useState(null);
-  const [modeles, setModeles] = useState(null);
+  const [hyundai, setHyundai] = useState(null);
+  const [model, setModel] = useState(null);
 
   useEffect(() => {
     console.log('app useeffect!!');
     let url = 'https://62be5b370bc9b1256155ad45.mockapi.io/huyndai';
-
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        setShop(data);
+        setHyundai(data);
       });
 
     console.log('app useeffect!!');
-    let url_modeles = 'https://62be5b370bc9b1256155ad45.mockapi.io/model';
-
-    fetch(url_modeles)
+    let url_model = 'https://62be5b370bc9b1256155ad45.mockapi.io/model';
+    fetch(url_model)
       .then((response) => response.json())
       .then((data) => {
-        setModeles(data);
+        setModel(data);
       });
   }, []);
-  var modeles_jsx = [];
 
-  if (modeles != null) {
-    modeles_jsx = (
-      <nav style={{padding:'3%'}} className="navbar navbar-expand-sm bg-dark navbar-dark">
-        <ul className="nav navbar-nav">
+  var model_jsx = [];
+  if (model != null) {
+    model_jsx = (
+      <nav style={{ padding: '3%', width: '1110px'}} className="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul className="menu nav navbar-nav">
           {
-            (modeles_jsx = modeles.map((item) => (
-              <li>
-                <Link to={'category/' + item.model_name}>
+            (model_jsx = model.map((item) => (
+              <li key={item.id}>
+                <Link to={'model/' + item.model_name}>
                   {item.model_name}
                 </Link>
               </li>
@@ -81,10 +79,10 @@ export default function Products() {
         </div>
       </div>
       <div className='container'>
-        {modeles_jsx}
+        {model_jsx}
       </div>
 
-      <ProductList data={shop}></ProductList>
+      <ProductList data={hyundai}></ProductList>
     </div>
 
   );
