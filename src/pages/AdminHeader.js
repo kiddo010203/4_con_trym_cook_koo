@@ -1,7 +1,5 @@
-import { Outlet, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import React from 'react';
-import { useEffect, useState } from 'react';
-import { NavLink } from "react-router-dom";
 
 export default function AdminHeader() {
 

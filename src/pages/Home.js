@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/Home.css';
 import '../App.css';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 function Home() {

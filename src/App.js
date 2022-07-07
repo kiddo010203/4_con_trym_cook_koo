@@ -1,6 +1,5 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import * as ReactDOM from 'react-dom';
 import Layout from './pages/Layout';
 import Home from './pages/Home';
 import Products from './pages/Products';
@@ -40,9 +39,9 @@ export default function App() {
           <Route path='detail/:id' element={<Detail />} />
         </Route>
         <Route path='/admin' element={<AdminLayout />} >
-          <Route index element={<AdminCars />} /> 
-          <Route path='/admin/:id' element={<CarDetail />} />         
-          <Route path='/admin/caredit/:id' element={<CarEdit />} />          
+          <Route index element={<AdminCars />} />
+          <Route path='/admin/:id' element={<CarDetail />} />
+          <Route path='/admin/caredit/:id' element={<CarEdit />} />
           <Route path='/admin/adminuser' element={<AdminUser/>}/>
           <Route path='/admin/adminuser/:id' element={<UserDetail/>}/>
           <Route path='/admin/useredit/:id' element={<UserEdit/>}/>

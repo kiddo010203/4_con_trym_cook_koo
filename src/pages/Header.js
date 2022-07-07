@@ -1,4 +1,4 @@
-import { Outlet, Link } from 'react-router-dom';
+import {  Link } from 'react-router-dom';
 import React from 'react';
 import { useState } from 'react';
 import '../css/Header.css';
@@ -7,16 +7,6 @@ export default function App() {
     const [hyundai, setHyundai] = useState(null);
     const [searchTerm, setSearchTerm] = useState('');
 
-    const doSearch = () => {
-        let url =
-            'https://62be5b370bc9b1256155ad45.mockapi.io/huyndai?name=' + searchTerm;
-        fetch(url)
-            .then((response) => response.json())
-            .then((data) => {
-                setSearchTerm('');
-                setHyundai(data);
-            });
-    };
 
 
     return (
