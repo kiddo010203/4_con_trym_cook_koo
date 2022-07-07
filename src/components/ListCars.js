@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from "react";
-import {Link, NavLink} from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { Link, NavLink } from 'react-router-dom';
 import "../css/MainAdmin.css";
 
 export default function ListCars(props) {
@@ -7,7 +7,6 @@ export default function ListCars(props) {
   const [cars, setCars] = useState(null);
 
   useEffect(() => {
-    console.log('ListCars', cars);
 
     setCars(props.data);  // set car data from props
   }, [props.data]);
@@ -33,39 +32,39 @@ export default function ListCars(props) {
   var list_cars = [];
   if (cars != null) {
     list_cars = cars.map((item) => (
-        <tr key={item.id} id={"list_car"}>
-          <td className="col-sm-1">{item.id}</td>
-          <td className="col-sm-2">{item.name}</td>
-          <td className="col-sm-3">{item.model}</td>
-          <td className="col-sm-2">${item.price}</td>
-          <td className="col-sm-1"><img className={"img_edit"} src={item.picture} /></td>
+      <tr key={item.id} id={"list_car"}>
 
-          <td className="col-sm-2">
-            <NavLink to={'/admin/' + item.id}>Details</NavLink>
-          <br/>
-            <NavLink to={'/admin/caredit/' + item.id}>
-              <button type="button" className="btn btn-primary">
-                Edit
-              </button>
-            </NavLink>
+        <td className="col-sm-1">{item.id}</td>
+        <td className="col-sm-2">{item.name}</td>
+        <td className="col-sm-3">{item.model}</td>
+        <td className="col-sm-2">${item.price}</td>
+        <td className="col-sm-1"><img className={"img_edit"} src={item.picture} /></td>
 
-            <button
-                type="button"
-                className="btn btn-danger"
-                onClick={() => deleteUser(item.id)}
-            >
-              <i className="fa fa-trash text-white" aria-hidden="true"></i>
+        <td className="col-sm-2">
+          <NavLink to={'/admin/' + item.id}><button type="button" className="btn btn-success">Chi tiết</button></NavLink><br />
+          <NavLink to={'/admin/caredit/' + item.id}>
+            <button type="button" className="btn btn-primary">
+              Chỉnh sửa
             </button>
-          </td>
-        </tr>
+          </NavLink><br />
+
+          <button
+            type="button"
+            className="btn btn-danger"
+            onClick={() => deleteUser(item.id)}
+          >
+            <i className="fa fa-trash" aria-hidden="true"></i>
+          </button>
+        </td>
+      </tr>
     ));
   }
 
 
   return (
 
-        <>
-          <tbody>{list_cars}</tbody>
-        </>
+    <>
+      <tbody>{list_cars}</tbody>
+    </>
   );
 }

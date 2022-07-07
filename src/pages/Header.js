@@ -48,7 +48,7 @@ export default function App() {
                             <Link to='contact' class="nav-link">Thông tin đại lý</Link>
                         </li>
                         <li class="nav-item">
-                            <Link to='contact' class="nav-link">Liên hệ</Link>
+                            <Link to='feedback' class="nav-link">Phản hồi</Link>
                         </li>
                     </ul>                   
                 </div>

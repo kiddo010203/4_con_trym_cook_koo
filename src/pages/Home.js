@@ -67,11 +67,6 @@ function Home() {
       </div>
 
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        {/* <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol> */}
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="container">
@@ -80,7 +75,7 @@ function Home() {
                   <img src='https://hyundai-api.thanhcong.vn/storage/uploads/post/DSC04115.jpg' />
                 </div>
                 <div class="img-hover-zoom col-xl-6 col-lg-6 col-md-6" border="1px" solid="#ddd" s>
-                  <h1>Hyundai trao tặng điểm thi đại học năm 2018</h1>
+                  <h1>Trao tặng điểm thi đại học năm 2018</h1>
                   <br />
                   <br />
                   <br />
@@ -197,6 +192,7 @@ function Home() {
           <span class="sr-only">Next</span>
         </a>
       </div>
+
     </div>
   );
 };

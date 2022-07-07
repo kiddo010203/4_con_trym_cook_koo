@@ -11,3 +11,19 @@
 #list_car {
     text-align: center;
 }
+
+.text-center {
+    margin-top:10px;
+}
+div.text-center .btn {
+    width: 150px;
+    height: 38px;
+}
+
+.btn {
+    width: 100px;
+    height: 38px;
+}
+.tdTieude{
+    width:20%;
+}

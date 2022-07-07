@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import { useParams } from 'react-router-dom';
-import "./css/MainAdmin.css";
+import "../css/MainAdmin.css";
 
 const CarsDetail = () => {
   const params = useParams();
@@ -22,8 +22,6 @@ const CarsDetail = () => {
         });
   }, []);
 
-
-
   const formatDate = (date) => {
     let day = date.getDate();
     let month = date.getMonth() + 1;
@@ -42,43 +40,43 @@ const CarsDetail = () => {
                       <table className="table table-user-information">
                         <tbody>
                         <tr>
-                          <td>
-                            <strong>Identificacion</strong>
+                          <td className="tdTieude">
+                            <strong>Số thứ tự</strong>
                           </td>
                           <td className="text-primary">{cars.id}</td>
                         </tr>
 
                         <tr>
                           <td>
-                            <strong>Name</strong>
+                            <strong className="tdTieude">Tên xe</strong>
                           </td>
                           <td className="text-primary">{cars.name}</td>
                         </tr>
 
                         <tr>
                           <td>
-                            <strong>Model</strong>
+                            <strong className="tdTieude">Loại xe</strong>
                           </td>
                           <td className="text-primary">{cars.model}</td>
                         </tr>
 
                         <tr>
                           <td>
-                            <strong>Price</strong>
+                            <strong className="tdTieude">Giá xe</strong>
                           </td>
                           <td className="text-primary">${cars.price}</td>
                         </tr>
 
                         <tr>
                           <td>
-                            <strong>Release Date</strong>
+                            <strong className="tdTieude">Ngày ra mắt</strong>
                           </td>
                           <td className="text-primary">{formatDate(cars.date)}</td>
                         </tr>
 
                         <tr>
                           <td>
-                            <strong>Picture</strong>
+                            <strong className="tdTieude">Ảnh xe</strong>
                           </td>
                           <td className="text-primary">
                             <img src={cars.picture} className={"img_edit"} />
@@ -86,7 +84,7 @@ const CarsDetail = () => {
                         </tr>
                         <tr>
                           <td>
-                            <strong>Bio</strong>
+                            <strong className="tdTieude">Nổi bật</strong>
                           </td>
                           <td className="text-primary">{cars.bio}</td>
                         </tr>
@@ -98,7 +96,7 @@ const CarsDetail = () => {
               </div>
             </div>
         ) : (
-            'loading'
+          <div className="spinner-border text-primary mt-3 ms-6" />
         )}
       </>
   );
