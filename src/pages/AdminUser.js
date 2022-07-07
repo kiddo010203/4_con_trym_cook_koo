@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
 import ListUser from "../Components/ListUser";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -34,7 +33,7 @@ export default function AdminUser() {
                             placeholder="Tìm khách hàng"
                             value={searchInput}
                             onChange={(e) => setSearchInput(e.target.value)}
-                        ></input>                      
+                        ></input>
                     </div>
 
                     <div className="text-left">

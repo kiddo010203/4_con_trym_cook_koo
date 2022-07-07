@@ -17,7 +17,7 @@ function Baohanh() {
   };
   return (
     <div>
-      <div class="tieude container-fluid">
+      <div className="tieude container-fluid">
         <h1>
           <p className="textbox0">
             <center>
@@ -27,15 +27,15 @@ function Baohanh() {
           <br />
         </h1>
 
-        <div class="container">
+        <div className="container">
           <div>
             {/* <button onClick={() => myFunction()}>Chính sách bảo hành</button>
             <button onClick={() => myFunction2()}>Bảo hành điện tử</button> */}
-            <button class="custom-btn btn-12" onClick={() => myFunction()}>
+            <button className="custom-btn btn-12" onClick={() => myFunction()}>
               <span>Click!</span>
               <span>Chính sách</span>
             </button>
-            <button class="custom-btn btn-12" onClick={() => myFunction2()}>
+            <button className="custom-btn btn-12" onClick={() => myFunction2()}>
               <span>Click!</span>
               <span>Bảo hành điện tử</span>
             </button>
@@ -105,10 +105,10 @@ function Baohanh() {
                 quy định.
               </p>
             </p>
-            <div class="container">
-              <div class="box2 row">
+            <div className="container">
+              <div className="box2 row">
                 <div
-                  class="col-xl-6 col-lg-6 col-md-6"
+                  className="col-xl-6 col-lg-6 col-md-6"
                   border="1px"
                   solid="#ddd"
                 >
@@ -120,20 +120,20 @@ function Baohanh() {
                     <br />
                     <br />
                     <br />
-                    <button type="button" class="btn btn-secondary">
+                    <button type="button" className="btn btn-secondary">
                       Kích hoạt
                     </button>
                   </p>
                 </div>
                 <div
-                  class="img-hover-zoom col-md-6 col-sm-4"
+                  className="img-hover-zoom col-md-6 col-sm-4"
                   border="1px"
                   solid="#ddd"
                 >
                   <img
                     src="https://hyundai.thanhcong.vn/images/technical-service/home2.png"
                     alt="responsive webite"
-                    class="img-fluid"
+                    className="img-fluid"
                     style={{ width: '100%' }}
                   />
                 </div>

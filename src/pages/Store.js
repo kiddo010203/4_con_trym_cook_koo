@@ -44,7 +44,7 @@ function Store() {
                 <Link to="/">Trang chủ</Link>
               </li>
               <li>
-                <i class="fa-solid fa-angle-right"></i>
+                <i className="fa-solid fa-angle-right"></i>
               </li>
               <li className="list-group-item">
                 <Link to=""> Thông tin đại lý</Link>
@@ -86,7 +86,7 @@ function Store() {
                 </select>
               </td>
               <td>
-                <select class="form-control" name="city">
+                <select className="form-control" name="city">
                   <option value="1">An Giang</option>
                   <option value="2">Bạc Liêu</option>
                   <option value="3">Bắc Cạn</option>
@@ -148,7 +148,7 @@ function Store() {
                 </select>
               </td>
               <td>
-                <select class="form-control" name="store">
+                <select className="form-control" name="store">
                   <option vlaue="Tất cả đại lý"> Tất cả đại lý</option>
                   <option vlaue="Đại lý xe du lịch"> Đại lý xe du lịch</option>
                   <option vlaue="Đại lý xe thương mại">

@@ -61,7 +61,7 @@ function TestDrive() {
                 <Link to="/">Trang chủ</Link>
               </li>
               <li>
-                <i class="fa-solid fa-angle-right"></i>
+                <i className="fa-solid fa-angle-right"></i>
               </li>
               <li className="list-group-item">
                 <Link to="">Đăng kí lái thử</Link>
@@ -93,8 +93,8 @@ function TestDrive() {
                     {carSave != null ? (
                       <img className='img-test' src={carSave.picture} />
                     ) : (
-                      <div class="spinner-border text-dark" role="status">
-                        <span class="sr-only">Loading...</span>
+                      <div className="spinner-border text-dark" role="status">
+                        <span className="sr-only">Loading...</span>
                       </div>
                     )}
 
@@ -162,11 +162,11 @@ function TestDrive() {
                     </strong>
                   </td>
                 </tr>
-                <tr colspan="3" class="form-check-inline">
-                  <label class="form-check-label" for="radio1">
+                <tr colspan="3" className="form-check-inline">
+                  <label className="form-check-label" for="radio1">
                     <input
                       type="radio"
-                      class="form-check-input"
+                      className="form-check-input"
                       id="radio1"
                       name="gender"
                       value="0"
@@ -175,10 +175,10 @@ function TestDrive() {
                     ></input>
                     Ông
                   </label>
-                  <label class="form-check-label" for="radio2">
+                  <label className="form-check-label" for="radio2">
                     <input
                       type="radio"
-                      class="form-check-input"
+                      className="form-check-input"
                       id="radio2"
                       name="gender"
                       value="1"
