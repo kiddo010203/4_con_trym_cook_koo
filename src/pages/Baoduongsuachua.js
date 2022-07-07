@@ -17,7 +17,7 @@ function Baoduong() {
   };
   return (
     <div>
-      <div className="tieude container-fluid">
+      <div class="tieude container-fluid">
         <h1>
           <p className="textbox0">
             <center>
@@ -27,15 +27,15 @@ function Baoduong() {
           <br />
         </h1>
 
-        <div className="container">
+        <div class="container">
           <div>
-            <button className="custom-btn btn-12" onClick={() => myFunction()}>
+            <button class="custom-btn btn-12" onClick={() => myFunction()}>
               <span>Click!</span>
               <span>Bảo dưỡng</span>
             </button>
-            <button className="custom-btn btn-12" onClick={() => myFunction2()}>
+            <button class="custom-btn btn-12" onClick={() => myFunction2()}>
               <span>Click!</span>
-              <span>Sửa chữa</span>
+              <span>Sửa chữa</span> 
             </button>
           </div>
           <div id="myDIV" style={ystyle}>

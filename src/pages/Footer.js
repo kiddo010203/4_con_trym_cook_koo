@@ -1,11 +1,11 @@
-import { Link } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
 import React from 'react';
 import '../css/Footer.css';
 
 const Footer = () => {
     return (
         <footer className="page-footer">
-            <div style={{ "backgroundColor": "#000", "color": "white" }}>
+            <div style={{ "background-color": "#000", "color": "white" }}>
                 <div className="container">
                     <div className='row'>
                         <div className="col-md-2 col-sm-6">
@@ -43,12 +43,12 @@ const Footer = () => {
                             <li className="menu-item-title">SOCIAL MEDIA</li>
                             <li className="menu-item"><Link to='/'>Email: cs@hyundai.thanhcong.vn </Link></li>
                             <li className="menu-item"><Link to='/'>Hotline: 1900561212 </Link></li>
-                            <li className="menu-item"> <i className="fa-brands fa-facebook"></i> <i className="fab fa-youtube"></i></li>
+                            <li className="menu-item"> <i class="fa-brands fa-facebook"></i> <i class="fab fa-youtube"></i></li>
                         </div>
                     </div>
                 </div>
             </div>
-            <div style={{ "backgroundColor": "#000", "color": "grey" }}>
+            <div style={{ "background-color": "#000", "color": "grey" }}>
                 <div className="container">
                     <div className='row'>
                         <div className='menu-item'>

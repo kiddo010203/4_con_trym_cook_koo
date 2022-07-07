@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import ProductList from '../Components/ProductList';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import '../css/Products.css';
 
 export default function Products() {
@@ -73,7 +73,7 @@ export default function Products() {
             <Link to="/">Trang chủ</Link>
           </li>
           <li>
-            <i className="fa-solid fa-angle-right"></i>
+            <i class="fa-solid fa-angle-right"></i>
           </li>
           <li className="list-group-item">
             <Link to=""> Sản Phẩm</Link>
@@ -81,8 +81,8 @@ export default function Products() {
         </ul>
       </div>
       <div className="container">
-        <div className="list">
-          <div className="banner-text">
+        <div className="listSanpham">
+          <div className="banner-text" style={{width :'103%'}}>
             <h1 className="text-center">Sản Phẩm</h1>
             <h4 className="text-center">
               Tất cả sản phẩm của Huyndai Hoàng Cầu Việt Nam
@@ -95,7 +95,7 @@ export default function Products() {
         </div>
       </div>
       <div>
-        <li className='search'>
+        <li class='search'>
           <form className="form-inline my-2 my-lg-0">
             <div className="input-group">
               <input

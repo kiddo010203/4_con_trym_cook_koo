@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import ListUser from "../Components/ListUser";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -30,17 +31,10 @@ export default function AdminUser() {
                         <input
                             type="text"
                             className="form-control"
+                            placeholder="Tìm khách hàng"
                             value={searchInput}
                             onChange={(e) => setSearchInput(e.target.value)}
-                        ></input>
-                        <div className="input-group-append">
-                            <button
-                                className="btn btn-secondary"
-                                type="button"
-                            >
-                                <i className="fa fa-search"></i>
-                            </button>
-                        </div>
+                        ></input>                      
                     </div>
 
                     <div className="text-left">

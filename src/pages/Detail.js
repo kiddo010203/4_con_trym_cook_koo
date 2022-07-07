@@ -42,16 +42,16 @@ const Detail = () => {
               <Link to="/">Trang chủ</Link>
             </li>
             <li>
-              <i className="fa-solid fa-angle-right" />
+              <i class="fa-solid fa-angle-right" />
             </li>
             <li className="list-group-item">
               <Link to=""> Sản Phẩm</Link>
             </li>
-            <li className="fa-solid fa-angle-right" style={{paddingTop : '3%'}}/>
+            <li class="fa-solid fa-angle-right" style={{paddingTop : '3%'}}/>
             <li className="list-group-item">
               <Link to="/">{datas.name}</Link>
             </li>
-            <li className="fa-solid fa-angle-right" style={{paddingTop : '3%'}}/>
+            <li class="fa-solid fa-angle-right" style={{paddingTop : '3%'}}/>              
             <li className="list-group-item">Nổi bật</li>
           </ul>
         </div>
