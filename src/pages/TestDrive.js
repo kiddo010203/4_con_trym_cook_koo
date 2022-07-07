@@ -16,7 +16,7 @@ function TestDrive() {
                 <Link to="/">Trang chủ</Link>
               </li>
               <li>
-                <i class="fa-solid fa-angle-right"></i>
+                <i className="fa-solid fa-angle-right"></i>
               </li>
               <li className="list-group-item">
                 <Link to="">Đăng kí lái thử</Link>

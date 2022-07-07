@@ -5,7 +5,7 @@ import { useState } from 'react';
 function Chuongtrinhdichvu() {
   return (
     <div>
-      <div class="tieude container-fluid">
+      <div className="tieude container-fluid">
         <p>
           <p className="textbox0">
             <center>
@@ -21,7 +21,7 @@ function Chuongtrinhdichvu() {
         </p>
         <br />
 
-        <div class="container">
+        <div className="container">
           <div></div>
           <p>
             <h2 className="para0">
@@ -46,21 +46,21 @@ function Chuongtrinhdichvu() {
             </p>
           </p>
         </div>
-        <div class="container">
-          <div class="box2 row">
+        <div className="container">
+          <div className="box2 row">
             <div
-              class="img-hover-zoom col-md-6 col-sm-4"
+              className="img-hover-zoom col-md-6 col-sm-4"
               border="1px"
               solid="#ddd"
             >
               <img
                 src="https://hyundai-api.thanhcong.vn/storage/uploads/post/KMDVHe.jpg"
                 alt="responsive webite"
-                class="img-fluid"
+                className="img-fluid"
                 style={{ width: '100%' }}
               />
             </div>
-            <div class="col-xl-6 col-lg-6 col-md-6" border="1px" solid="#ddd">
+            <div className="col-xl-6 col-lg-6 col-md-6" border="1px" solid="#ddd">
               <p className="text2" style={{}}>
                 <h2>
                   <strong>
@@ -72,7 +72,7 @@ function Chuongtrinhdichvu() {
                 <br />
                 <br />
                 <br />
-                <button type="button" class="btn btn-secondary">
+                <button type="button" className="btn btn-secondary">
                   Xem chi tiết
                 </button>
               </p>
