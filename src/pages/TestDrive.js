@@ -56,12 +56,12 @@ function TestDrive() {
           <div className="banner"></div>
 
           <div className="container">
-            <ul>
+            <ul className='Tieude'>
               <li className="list-group-item">
                 <Link to="/">Trang chủ</Link>
               </li>
               <li>
-                <i className="fa-solid fa-angle-right"></i>
+                <i class="fa-solid fa-angle-right"></i>
               </li>
               <li className="list-group-item">
                 <Link to="">Đăng kí lái thử</Link>
@@ -93,8 +93,8 @@ function TestDrive() {
                     {carSave != null ? (
                       <img className='img-test' src={carSave.picture} />
                     ) : (
-                      <div className="spinner-border text-dark" role="status">
-                        <span className="sr-only">Loading...</span>
+                      <div class="spinner-border text-dark" role="status">
+                        <span class="sr-only">Loading...</span>
                       </div>
                     )}
 
@@ -162,11 +162,11 @@ function TestDrive() {
                     </strong>
                   </td>
                 </tr>
-                <tr colspan="3" className="form-check-inline">
-                  <label className="form-check-label" for="radio1">
+                <tr colspan="3" class="form-check-inline">
+                  <label class="form-check-label" for="radio1">
                     <input
                       type="radio"
-                      className="form-check-input"
+                      class="form-check-input"
                       id="radio1"
                       name="gender"
                       value="0"
@@ -175,10 +175,10 @@ function TestDrive() {
                     ></input>
                     Ông
                   </label>
-                  <label className="form-check-label" for="radio2">
+                  <label class="form-check-label" for="radio2">
                     <input
                       type="radio"
-                      className="form-check-input"
+                      class="form-check-input"
                       id="radio2"
                       name="gender"
                       value="1"
@@ -588,9 +588,6 @@ function TestDrive() {
                 <tr>
                   <td>
                     <input type="submit" className="btn btn-primary" />
-
-
-
                   </td>
                 </tr>
               </tbody>

@@ -22,6 +22,9 @@ export default function Admin() {
                 console.log(data);
             });
     }, [searchInput]);
+
+
+
     return (
         <div className="container-fluid">
             <h2 className="text-center">QUẢN LÝ THÔNG TIN XE</h2>

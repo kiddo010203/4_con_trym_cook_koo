@@ -1,10 +1,11 @@
 import React from 'react';
 import '../css/styles.css';
+import { useState } from 'react';
 
 function Chuongtrinhdichvu() {
   return (
     <div>
-      <div className="tieude container-fluid">
+      <div class="tieude container-fluid">
         <p>
           <p className="textbox0">
             <center>
@@ -20,7 +21,7 @@ function Chuongtrinhdichvu() {
         </p>
         <br />
 
-        <div className="container">
+        <div class="container">
           <div></div>
           <p>
             <h2 className="para0">
@@ -45,21 +46,21 @@ function Chuongtrinhdichvu() {
             </p>
           </p>
         </div>
-        <div className="container">
-          <div className="box2 row">
+        <div class="container">
+          <div class="box2 row">
             <div
-              className="img-hover-zoom col-md-6 col-sm-4"
+              class="img-hover-zoom col-md-6 col-sm-4"
               border="1px"
               solid="#ddd"
             >
               <img
                 src="https://hyundai-api.thanhcong.vn/storage/uploads/post/KMDVHe.jpg"
                 alt="responsive webite"
-                className="img-fluid"
+                class="img-fluid"
                 style={{ width: '100%' }}
               />
             </div>
-            <div className="col-xl-6 col-lg-6 col-md-6" border="1px" solid="#ddd">
+            <div class="col-xl-6 col-lg-6 col-md-6" border="1px" solid="#ddd">
               <p className="text2" style={{}}>
                 <h2>
                   <strong>
@@ -71,7 +72,7 @@ function Chuongtrinhdichvu() {
                 <br />
                 <br />
                 <br />
-                <button type="button" className="btn btn-secondary">
+                <button type="button" class="btn btn-secondary">
                   Xem chi tiết
                 </button>
               </p>

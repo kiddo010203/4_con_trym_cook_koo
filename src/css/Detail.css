@@ -1,39 +1,25 @@
-ul .list-group-item {
-    border: none;
-    background-color: unset;
+.table-menu {
+    background-color: rgba(12, 4, 129, 0.9);
 }
 
-.banner-table td {
-    padding-right: 10px;
-}
-
-td a {
-    color: black;
-}
-
-
-.menu-product li {
-    background-color: rgba(0, 47, 255, 0.8);
-    display: flex;
-    text-align: center;
+.table-menu th a {
+    color: white;
     font-size: 20px;
-    padding: 10px 264px;
-
 }
 
-.menu-product li a {
+img {
+    width: 100%;
+}
+
+.Tieude {
+    margin-top: 2%;
+    color: white;
+}
+.Tieude .list-group-item {
     color: white;
 }
 
-.menu-product-sub li {
-    background-color: rgba(255, 255, 255, 0.8);
-    display: flex;
-    text-align: center;
-    font-size: 20px;
-    padding: 10px 264px;
-
+.Tieude a {
+    color: white;
 }
 
-.menu-product-sub li a {
-    color: rgb(0, 0, 0);
-}

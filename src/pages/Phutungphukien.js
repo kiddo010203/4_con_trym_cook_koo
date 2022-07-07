@@ -17,7 +17,7 @@ function Phutungphukien() {
   };
   return (
     <div>
-      <div className="tieude container-fluid">
+      <div class="tieude container-fluid">
         <h1>
           <p className="textbox0">
             <center>
@@ -27,13 +27,13 @@ function Phutungphukien() {
           <br />
         </h1>
 
-        <div className="container">
+        <div class="container">
           <div>
-            <button className="custom-btn btn-12" onClick={() => myFunction()}>
+            <button class="custom-btn btn-12" onClick={() => myFunction()}>
               <span>Click!</span>
               <span>Phụ tùng</span>
             </button>
-            <button className="custom-btn btn-12" onClick={() => myFunction2()}>
+            <button class="custom-btn btn-12" onClick={() => myFunction2()}>
               <span>Click!</span>
               <span>Phụ kiện</span>
             </button>
@@ -88,22 +88,22 @@ function Phutungphukien() {
                 trình, ốp la zăng, lướt tản nhiệt thể thao, thảm trải sàn, lưới
                 chở hàng... <br />
                 <br />
-                <div className="accessories-images2">
-                  <div className="row">
-                    <div className="col-md-3">
+                <div class="accessories-images2">
+                  <div class="row">
+                    <div class="col-md-3">
                       <img src="https://hyundai-api.thanhcong.vn/storage/uploads/page/accessories6.png" />
                     </div>
-                    <div className="col-md-3">
+                    <div class="col-md-3">
                       <img src="https://hyundai-api.thanhcong.vn/storage/uploads/page/accessories5.png" />
                     </div>
-                    <div className="col-md-3">
+                    <div class="col-md-3">
                       <img src="https://hyundai-api.thanhcong.vn/storage/uploads/page/accessories3.png" />
                     </div>
-                    <div className="col-md-3">
+                    <div class="col-md-3">
                       <img src="https://hyundai-api.thanhcong.vn/storage/uploads/page/accessories4.png" />
                     </div>
                   </div>{' '}
-                  <div className="desc">
+                  <div class="desc">
                     <center> Hình ảnh phụ kiện chính hãng</center>
                   </div>
                 </div>
