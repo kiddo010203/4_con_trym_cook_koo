@@ -3,10 +3,12 @@
 
 
 # How run website
-- use git clone repository
-- use github clone repository
+- git clone repository
+- use WebStorm run repository (WebStorm support auto install package and script running)
 
 
+
+# 
 
 
 
