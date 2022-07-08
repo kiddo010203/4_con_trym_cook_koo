@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
 import ListUser from "../Components/ListUser";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -10,7 +9,7 @@ export default function AdminUser() {
 
 
     useEffect(() => {
-        let url = "https://62b04951b0a980a2ef4f686d.mockapi.io/user";
+        let url = "https://62b90e92ff109cd1dc8ad594.mockapi.io/user";
         if (searchInput.length > 0) {
             url = url + "?name=" + searchInput;
         }
@@ -34,7 +33,7 @@ export default function AdminUser() {
                             placeholder="Tìm khách hàng"
                             value={searchInput}
                             onChange={(e) => setSearchInput(e.target.value)}
-                        ></input>                      
+                        ></input>
                     </div>
 
                     <div className="text-left">
