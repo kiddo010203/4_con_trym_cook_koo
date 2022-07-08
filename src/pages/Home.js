@@ -8,7 +8,8 @@ function Home() {
 
 
   return (
-    <div>
+    <div class="container-fluid">
+    <div className='row'>
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -40,8 +41,15 @@ function Home() {
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
         </button>
       </div>
+    <div class="col-lg-2">
+          <br /><br /><br /><br />
+          <img
+            src="https://bdsweb.com.vn/upload_images/images/bbds/banner-bat-dong-san-doc-00.jpg"
+          ></img>
+        </div>
 
-      <div class="container">
+      <div class="col-lg-8">
+    <div class="container">
         <div class="box1 row">
           <div class="img-hover-zoom col-xl-6 col-lg-6 col-md-6" border="1px" solid="#ddd">
             <h2>Dịch vụ lái thử</h2>
@@ -204,7 +212,14 @@ function Home() {
           <span class="sr-only">Next</span>
         </a>
       </div>
-
+</div>
+<div class="col-lg-2">
+          <br /><br /><br /><br />
+          <img
+            src="https://bdsweb.com.vn/upload_images/images/bbds/banner-bat-dong-san-doc-00.jpg"
+          ></img>
+        </div>
+</div>
     </div>
   );
 };
