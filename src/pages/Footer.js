@@ -11,39 +11,40 @@ const Footer = () => {
                         <div className="col-md-2 col-sm-6">
                             <br></br>
                             <li className="menu-item-title">SẢN PHẨM</li>
-                            <li className="menu-item"><Link to='/'>Xe du lịch </Link></li>
-                            <li className="menu-item"><Link to='/'>Xe SUV </Link></li>
-                            <li className="menu-item"><Link to='/'>Xe chuyên dụng, tải nhẹ </Link></li>
-                            <li className="menu-item"><Link to='/'>Xe thương mại </Link></li>
+                            <li className="menu-item"><Link to='products'>Xe du lịch </Link></li>
+                            <li className="menu-item"><Link to='products'>Xe SUV </Link></li>
+                            <li className="menu-item"><Link to='products'>Xe chuyên dụng, tải nhẹ </Link></li>
+                            <li className="menu-item"><Link to='products'>Xe thương mại </Link></li>
                         </div>
                         <div className="col-md-2 col-sm-6">
                             <br></br>
-                            <li className="menu-item-title">THUÊ XE</li>
-                            <li className="menu-item"><Link to='/'>Chọn xe </Link></li>
-                            <li className="menu-item"><Link to='/'>Thông tin dịch vụ </Link></li>
-                            <li className="menu-item"><Link to='/'>Đăng ký lái thử </Link></li>
-                            <li className="menu-item"><Link to='/'>Tìm đại lý </Link></li>
+                            <li className="menu-item-title">LÁI THỬ</li>
+                            <li className="menu-item"><Link to='testdrive'>Đăng ký lái thử </Link></li>
+                            <li className="menu-item"><Link to='products'>Chọn xe </Link></li>
+                            <li className="menu-item"><Link to='service'>Thông tin dịch vụ </Link></li>
                         </div>
                         <div className="col-md-2 col-sm-6">
                             <br></br>
                             <li className="menu-item-title">DỊCH VỤ</li>
-                            <li className="menu-item"><Link to='/'>Phụ tùng & Phụ kiện chính hãng </Link></li>
-                            <li className="menu-item"><Link to='/'>Đăng ký làm đại lý </Link></li>
-                            <li className="menu-item"><Link to='/'>Tìm đại lý </Link></li>
-                            <li className="menu-item"><Link to='/'>Chăm sóc khách hàng </Link></li>
+                            <li className="menu-item"><Link to='baohanh'>Bảo hành</Link></li>
+                            <li className="menu-item"><Link to='baohiem'>Bảo hiểm</Link></li>
+                            <li className="menu-item"><Link to='baoduongsuachua'>Bảo dưỡng</Link></li>
+                            <li className="menu-item"><Link to='chuongtrinh'>Chương trình dịch vụ</Link></li>
+                            <li className="menu-item"><Link to='trieuhoi'>Triệu hồi</Link></li>
                         </div>
                         <div className="col-md-2 col-sm-6">
                             <br></br>
-                            <li className="menu-item-title">GIỚI THIỆU</li>
-                            <li className="menu-item"><Link to='/'>Tin công ty </Link></li>
-                            <li className="menu-item"><Link to='/'>Giới thiệu Hyundai </Link></li>
+                            <li className="menu-item-title">KHÁCH HÀNG</li>
+                            <li className="menu-item"><Link to='customercare'>Chăm sóc khách hàng</Link></li>
+                            <li className="menu-item"><Link to='tablestore'>Hỗ trợ kỹ thuật </Link></li>
+                            <li className="menu-item"><Link to='baoduongsuachua'>Bảo dưỡng định kỳ</Link></li>
                         </div>
                         <div className="col-md-2 col-sm-6">
                             <br></br>
                             <li className="menu-item-title">SOCIAL MEDIA</li>
                             <li className="menu-item"><Link to='/'>Email: cs@hyundai.thanhcong.vn </Link></li>
                             <li className="menu-item"><Link to='/'>Hotline: 1900561212 </Link></li>
-                            <li className="menu-item"> <i className="fa-brands fa-facebook"></i> <i className="fab fa-youtube"></i></li>
+                            <li className="menu-item"> <i class="fa-brands fa-facebook"></i> <i class="fab fa-youtube"></i></li>
                         </div>
                     </div>
                 </div>
