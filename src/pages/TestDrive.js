@@ -42,11 +42,7 @@ function TestDrive() {
   const saveUser = () => {
     console.log('save data', user);
     let method = 'POST';
-    let id = '';
-    if (user.id) {
-      method = 'PUT';
-      id = user.id;
-    }
+    let id = '';   
 
     const requestOptions = {
       method: method,
