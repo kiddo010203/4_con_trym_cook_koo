@@ -1,5 +1,6 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import * as ReactDOM from 'react-dom';
 import Layout from './pages/Layout';
 import Home from './pages/Home';
 import Products from './pages/Products';
@@ -14,6 +15,11 @@ import Trieuhoi from './pages/Trieuhoi';
 import Detail from './pages/Detail';
 import Store from './pages/Store';
 import TestDrive from './pages/TestDrive';
+import Tablestore from './pages/Tablestore';
+import ThanhCong from './pages/ThanhCong';
+import Customercare from './pages/Customercare';
+import Baohiem from './pages/Baohiem';
+import Giaonhanxe from './pages/Giaonhanxe';
 
 import AdminLayout from './pages/AdminLayout';
 import AdminCars from './pages/AdminCars';
@@ -41,11 +47,16 @@ export default function App() {
           <Route path='detail/:id' element={<Detail />} />
           <Route path='store' element={<Store />} />
           <Route path='testdrive' element={<TestDrive />} />
+          <Route path="/tablestore" element={<Tablestore />} />
+          <Route path="/thanhcong" element={<ThanhCong />} />
+          <Route path="/customercare" element={<Customercare />} />
+          <Route path="/baohiem" element={<Baohiem />} />
+          <Route path="/giaonhanxe" element={<Giaonhanxe />} />
         </Route>
         <Route path='/admin' element={<AdminLayout />} >
-          <Route index element={<AdminCars />} />
-          <Route path='/admin/:id' element={<CarDetail />} />
-          <Route path='/admin/caredit/:id' element={<CarEdit />} />
+          <Route index element={<AdminCars />} /> 
+          <Route path='/admin/:id' element={<CarDetail />} />         
+          <Route path='/admin/caredit/:id' element={<CarEdit />} />          
           <Route path='/admin/adminuser' element={<AdminUser/>}/>
           <Route path='/admin/adminuser/:id' element={<UserDetail/>}/>
           <Route path='/admin/useredit/:id' element={<UserEdit/>}/>
