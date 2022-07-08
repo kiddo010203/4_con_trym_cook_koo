@@ -55,7 +55,7 @@ function Home() {
       </div>
       <div class="container">
         <div class="box1 row">
-        <div class="img-hover-zoom col-xl-6 col-lg-6 col-md-6" border="1px" solid="#ddd" style={{ width: '100%' }}>
+        <div class="img-hover-zoom col-xl-6 col-lg-6 col-md-6" border="1px" solid="#ddd" style={{ width: '100%' , height: '100' , margin: '0% 0% 0% -3%' }}>
             <img src='https://hyundai-api.thanhcong.vn/storage/uploads/maintenance/service-hyundai-min.png' />
           </div>
           <div class="img-hover-zoom col-xl-6 col-lg-6 col-md-6" border="1px" solid="#ddd">
