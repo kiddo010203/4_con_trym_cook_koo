@@ -43,7 +43,7 @@ const Footer = () => {
                             <li className="menu-item-title">SOCIAL MEDIA</li>
                             <li className="menu-item"><Link to='/'>Email: cs@hyundai.thanhcong.vn </Link></li>
                             <li className="menu-item"><Link to='/'>Hotline: 1900561212 </Link></li>
-                            <li className="menu-item"> <i class="fa-brands fa-facebook"></i> <i class="fab fa-youtube"></i></li>
+                            <li className="menu-item"> <i className="fa-brands fa-facebook"></i> <i className="fab fa-youtube"></i></li>
                         </div>
                     </div>
                 </div>
