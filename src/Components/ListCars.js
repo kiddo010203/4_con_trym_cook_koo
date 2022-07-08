@@ -63,8 +63,8 @@ export default function ListCars(props) {
 
     return (
 
-        <>
+
             <tbody>{list_cars}</tbody>
-        </>
+
     );
 }

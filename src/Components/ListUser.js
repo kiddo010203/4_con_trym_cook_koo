@@ -65,7 +65,7 @@ export default function ListUser(props) {
     return (
 
         <>
-            <tbody>{list_users}</tbody>
+           {list_users}
         </>
     );
 }
